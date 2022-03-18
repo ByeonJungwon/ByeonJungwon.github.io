@@ -2,6 +2,7 @@ import EducationItem from '../types/EducationItem';
 import ExperienceItem from '../types/ExperienceItem';
 import ProjectItem from '../types/ProjectItem';
 import ArticleItem from '../types/ArticleItem';
+import WebzineItem from '../types/WebzineItem';
 import ReportItem from '../types/ReportItem';
 import HanyangUnivLogo from '../assets/HanyangUniv.png';
 import UtrehtUnivLogo from '../assets/UtrehtUniv.png';
@@ -15,6 +16,18 @@ import Article5 from '../assets/Article_5.jpg';
 import Article6 from '../assets/Article_6.jpg';
 import Article7 from '../assets/Article_7.jpg';
 import Article8 from '../assets/Article_8.png';
+import Webzine1 from '../assets/Webzine_1.jpg';
+import Webzine2 from '../assets/Webzine_2.jpg';
+import Webzine3 from '../assets/Webzine_3.jpg';
+import Webzine4 from '../assets/Webzine_4.jpg';
+import Webzine1Content from '../assets/Webzine_1_Content.png';
+import Webzine2Content from '../assets/Webzine_2_Content.png';
+import Webzine3Content from '../assets/Webzine_3_Content.png';
+import Webzine4Content from '../assets/Webzine_4_Content.png';
+import BrandedContent1 from '../assets/BrandedContents_1.png';
+import BrandedContent2 from '../assets/BrandedContents_2.png';
+import BrandedContent3 from '../assets/BrandedContents_3.png';
+import BrandedContent4 from '../assets/BrandedContents_4.png';
 import Report1 from '../assets/Report_1.png';
 import Report2 from '../assets/Report_2.png';
 
@@ -26,6 +39,8 @@ type Configs = {
   experience: ExperienceItem[];
   project: ProjectItem[];
   article: ArticleItem[];
+  webzine: WebzineItem[];
+  brandedContents: WebzineItem[];
   report: ReportItem[];
   email: string;
   linkedin: string;
@@ -108,7 +123,7 @@ const configs: Configs = {
     },
     {
       title: '교원 KRT',
-      description: '언론홍보/커뮤니케이션, 보도자료, 기획기사, 웹진 발행 등',
+      description: '언론홍보 / 콘텐츠 / 브랜딩 / 행사 등',
       startDate: '2014년 10월 1일',
       endDate: '2020년 8월 28일',
       details: [
@@ -117,7 +132,8 @@ const configs: Configs = {
           contents: [
             '대내외 이슈 모니터링',
             '미디어 리스트, 출입 기자단 관리',
-            '부정 이슈 보도 발생 시 피해 최소화를 위한 적극 커뮤니케이션, 전사 언론 응대 매뉴얼 배포 (예: 다낭 교통사고 보도의 건, SBS 뉴스토리 사례 등)',
+            '부정 이슈 보도 발생 시 피해 최소화를 위한 적극 커뮤니케이션, 전사 언론 응대 매뉴얼 배포',
+            '(예: 다낭 교통사고 보도의 건, SBS 뉴스토리 사례 등)',
           ],
         },
         {
@@ -137,12 +153,34 @@ const configs: Configs = {
           ],
         },
         {
-          title: '웹진',
-          contents: ['KRTalk 운영'],
-        },
-        {
           title: '홍보센터 개설',
           contents: ['주도적으로 홈페이지 홍보센터 기획, 개설, 운영'],
+        },
+        {
+          title: '콘텐츠',
+          contents: [
+            'KRTalk 작성 및 운영(2015.10~)',
+            '공식 유튜브 활성화 방안 기획, 신규 콘텐츠 기획, 스크립트 작업 F/U',
+          ],
+        },
+        {
+          title: '브랜딩',
+          contents: [
+            '브랜드 광고 전략 수립 및 집행',
+            '인천국제공항 입국장 DID 브랜디드 콘텐츠 카피라이팅',
+            '신문광고 소재 기획 및 매체 운영 관리, 수익쉐어형 신규 공동사업건 진행(중앙/동아)',
+            'RD/종편 PPL/전동차 음성 광고/서울 시내버스 YAP TV 광고 등 집행 사례',
+            'CI 리뉴얼, 로고 변경 참여',
+            "브랜디드 서비스 '홈픽업' 런칭 및 홍보",
+          ],
+        },
+        {
+          title: '행사',
+          contents: [
+            '2018 K-라이프트렌드쇼, 2017 축제여행박람회 KRT 부스 운영(PM)',
+            '종무식, 창립기념일 등 사내 행사 PM',
+            'CSR 활동 관리(동방사회복지회/한기범희망나눔재단)',
+          ],
         },
       ],
     },
@@ -187,6 +225,62 @@ const configs: Configs = {
       title: '어느새 스물…KRT, 창립 20주년 기념행사 성료',
       description: '중앙일보, 2019.10.28',
       content: Article8,
+    },
+  ],
+  webzine: [
+    {
+      image: Webzine1,
+      title: '우정 여행지',
+      subTitle: 'KRTalk Vol.31',
+      url: 'https://www.krt.co.kr/tourinfo/webzineView?seq=31',
+      content: Webzine1Content,
+    },
+    {
+      image: Webzine2,
+      title: '휘게 라이프 탐구',
+      subTitle: 'KRTalk Vol.35',
+      url: 'https://www.krt.co.kr/tourinfo/webzineView?seq=35',
+      content: Webzine2Content,
+    },
+    {
+      image: Webzine3,
+      title: '꿈의 여행지 아프리카',
+      subTitle: 'KRTalk Vol.47',
+      url: 'https://www.krt.co.kr/tourinfo/webzineView?seq=47',
+      content: Webzine3Content,
+    },
+    {
+      image: Webzine4,
+      title: '해외여행 상식',
+      subTitle: 'KRTalk Vol.59',
+      url: 'https://www.krt.co.kr/tourinfo/webzineView?seq=59',
+      content: Webzine4Content,
+    },
+  ],
+  brandedContents: [
+    {
+      image: BrandedContent1,
+      title: '(유튜브) 엄마랑 치앙라이 with 태국 관광청',
+      subTitle: '구성/출연/촬영 등',
+      url: 'https://youtu.be/365n4qMTYZM',
+    },
+    {
+      image: BrandedContent2,
+      title: '(뉴스) 홈픽업 서비스',
+      subTitle: '인터뷰/취재 Arrange',
+      url: 'https://byeonjungwon.github.io/assets/BrandedContents_2_Video.mp4',
+    },
+    {
+      image: BrandedContent3,
+      title: '(행사 온에어) 함께 만든 우리 계획',
+      subTitle: '기획/구성/PM 역할 수행',
+      url: 'https://blog.naver.com/kofons_ourplan/222408817131',
+    },
+    {
+      image: BrandedContent4,
+      title: '(행사 온에어) 함께 한 시간',
+      subTitle: '기획/구성/PM 역할 수행',
+      url: 'https://blog.naver.com/kofons_ourplan/222412865136',
     },
   ],
   report: [

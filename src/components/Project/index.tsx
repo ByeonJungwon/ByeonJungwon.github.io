@@ -39,7 +39,11 @@ function Project({ title, items }: ProjectProps) {
                         <li>
                           <b>{detail.title}</b>
                           {detail.contents.map((content, contentIndex) => {
-                            return <ul key={contentIndex}>{content}</ul>;
+                            return (
+                              <ul style={{ wordBreak: 'break-all' }} key={contentIndex}>
+                                {content}
+                              </ul>
+                            );
                           })}
                         </li>
                       </ul>

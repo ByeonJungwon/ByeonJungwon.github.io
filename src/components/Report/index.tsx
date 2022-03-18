@@ -36,7 +36,7 @@ function Report({ title, items }: ReportProps) {
                     lineHeight: 1.2,
                   }}
                   cover={
-                    <a href={item.url}>
+                    <a href={item.url} target="_blank">
                       <img
                         style={{ width: '100%', padding: 1 }}
                         alt={item.title}

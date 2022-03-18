@@ -10,6 +10,8 @@ import Footer from './core/Footer';
 import Project from './components/Project';
 import Article from './components/Article';
 import Report from './components/Report';
+import Webzine from './components/Webzine';
+import BrandedContent from './components/BrandedContent';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Experience title="EXPERIENCE" items={configs.experience} />
       <Project title="PROJECT" items={configs.project} />
       <Article title="ARTICLE" items={configs.article} />
+      <Webzine title="WEBZINE" items={configs.webzine} />
+      <BrandedContent title="BRANDED CONTENTS" items={configs.brandedContents} />
       <Report title="REPORT" items={configs.report} />
       <Contact title="CONTACT" email={configs.email} linkedin={configs.linkedin} />
       <Footer>Copyright © 2022 {configs.name}</Footer>
